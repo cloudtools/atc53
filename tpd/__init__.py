@@ -126,7 +126,7 @@ class BaseAWSObject(object):
             else:
                 self._raise_type(name, value, expected_type)
 
-        raise AttributeError("%s object does not support attribute %s" %
+        raise AttributeError('%s object does not support attribute %s' %
                              (self.type, name))
 
     def _raise_type(self, name, value, expected_type):
@@ -139,8 +139,8 @@ class BaseAWSObject(object):
     def JSONrepr(self):
         for k, (prop_type, required) in self.props.items():
             if required and k not in self.properties:
-                type = getattr(self, 'type', "<unknown type>")
-                raise ValueError("Resource %s required in type %s" % (k, type))
+                type = getattr(self, 'type', '<unknown type>')
+                raise ValueError('Resource %s required in type %s' % (k, type))
         self.validate()
         # If no other properties are set, only return the Type.
         # Mainly used to not have an empty "Properties".
@@ -167,7 +167,7 @@ class PolicyDocument(object):
         self.start_rule = None
         self.endpoints = {}
         self.rules = {}
-        self.version = "2015-10-01"
+        self.version = '2015-10-01'
 
     def to_dict(self):
         t = {}
@@ -195,6 +195,9 @@ class PolicyDocument(object):
     def add_rule(self, rule):
         self.rules[rule.name] = rule
 
+    def add_start_endpoint(self, start_endpoint):
+        self.start_endpoint = start_endpoint
+
     def add_start_rule(self, start_rule):
         # TODO: validate this rule exists already?
         self.start_rule = start_rule
@@ -203,7 +206,7 @@ class PolicyDocument(object):
         if version:
             self.version = version
         else:
-            self.version = "2015-10-01"
+            self.version = '2015-10-01'
 
     def to_json(self, indent=4, sort_keys=True, separators=(',', ': ')):
         return json.dumps(self.to_dict(), indent=indent,
