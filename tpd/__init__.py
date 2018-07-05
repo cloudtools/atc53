@@ -68,8 +68,8 @@ class BaseAWSObject(object):
             }
         else:
             self.resource = self.properties
-        if hasattr(self, 'type') and self.type is not None:
-            self.resource['Type'] = self.type
+        if hasattr(self, 'rule_type') and self.rule_type is not None:
+            self.resource['RuleType'] = self.rule_type
         self.__initialized = True
 
         # Now that it is initialized, populate it with the kwargs
@@ -157,6 +157,13 @@ class AWSHelperFn(object):
             return data.name
         else:
             return data
+
+
+class AWSProperty(BaseAWSObject):
+    dictname = None
+
+    def __init__(self, title=None, **kwargs):
+        super(AWSProperty, self).__init__(title, **kwargs)
 
 
 class PolicyDocument(object):
