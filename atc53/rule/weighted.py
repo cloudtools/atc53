@@ -1,4 +1,4 @@
-from tpd import BaseAWSObject, AWSProperty
+from atc53 import BaseAWSObject, AWSProperty
 
 
 class WeightedItem(AWSProperty):

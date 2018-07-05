@@ -1,5 +1,5 @@
-from tpd import PolicyDocument
-from tpd.rule.failover import FailoverRule, Primary, Secondary
+from atc53 import PolicyDocument
+from atc53.rule.failover import FailoverRule, Primary, Secondary
 
 import unittest
 

@@ -1,4 +1,4 @@
-from tpd import PolicyDocument
+from atc53 import PolicyDocument
 
 import unittest
 

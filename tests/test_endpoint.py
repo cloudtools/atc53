@@ -1,4 +1,4 @@
-from tpd.endpoint import Endpoint
+from atc53.endpoint import Endpoint
 
 import unittest
 

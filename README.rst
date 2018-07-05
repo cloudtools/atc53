@@ -1,11 +1,11 @@
-===
-tpd
-===
+=====
+atc53
+=====
 
 About
 =====
 
-tpd - library to create `AWS Route53 Traffic Policy Document`_ descriptions.
+atc53 - library to create `AWS Route53 Traffic Policy Document`_ descriptions.
 This library operates in a similar fashion to `troposphere`_ , aiming for
 compatibility and familiarity when defining infrastructure.
 
@@ -26,15 +26,15 @@ A simple example:
 
 .. code:: python
 
-    from tpd import PolicyDocument
-    import tpd.rule as rule
+    from atc53 import PolicyDocument
+    import atc53.rule as rule
 
     p = PolicyDocument()
 
 Licensing
 =========
 
-tpd is licensed under the `BSD 2-Clause license`_.
+atc53 is licensed under the `BSD 2-Clause license`_.
 See `LICENSE`_ for the full license text.
 
 .. _`AWS Route53 Traffic Policy Document`: https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html

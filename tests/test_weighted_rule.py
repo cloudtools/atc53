@@ -1,5 +1,5 @@
-from tpd import PolicyDocument
-from tpd.rule.weighted import WeightedItem, WeightedRule
+from atc53 import PolicyDocument
+from atc53.rule.weighted import WeightedItem, WeightedRule
 
 import unittest
 

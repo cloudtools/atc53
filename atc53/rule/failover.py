@@ -1,4 +1,4 @@
-from tpd import AWSProperty, BaseAWSObject
+from atc53 import AWSProperty, BaseAWSObject
 
 
 class Primary(AWSProperty):

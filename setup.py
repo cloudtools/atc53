@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='tpd',
+    name='atc53',
     version='0.0.1',
     description='AWS Traffic Policy Document creation library',
     author='Tony Tiger',
