@@ -17,7 +17,7 @@ Github:
 
 .. code:: sh
 
-    $ pip install git+ssh://git@github.com/tigertoes/tpd
+    $ pip install git+ssh://git@github.com/cloudtools/tpd
 
 Examples
 ========
@@ -40,4 +40,4 @@ See `LICENSE`_ for the full license text.
 .. _`AWS Route53 Traffic Policy Document`: https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html
 .. _`troposphere`: https://github.com/cloudtools/troposphere
 .. _`BSD 2-Clause license`: https://opensource.org/licenses/BSD-2-Clause
-.. _`LICENSE`: https://github.com/tigertoes/tpd/blob/master/LICENSE
+.. _`LICENSE`: https://github.com/cloudtools/tpd/blob/master/LICENSE
