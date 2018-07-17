@@ -17,7 +17,7 @@ Github:
 
 .. code:: sh
 
-    $ pip install git+ssh://git@github.com/cloudtools/tpd
+    $ pip install git+ssh://git@github.com/cloudtools/atc53
 
 Examples
 ========
@@ -27,9 +27,26 @@ A simple example:
 .. code:: python
 
     from atc53 import PolicyDocument
-    import atc53.rule as rule
+    from atc53.rule.failover import FailoverRule, Primary, Secondary
 
     p = PolicyDocument()
+    main = Endpoint('MainEndpoint',
+                    Type='elastic-load-balancer',
+                    Value='elb-222222.us-west-1.elb.amazonaws.com')
+    backup = Endpoint('BackupEndpoint',
+                      Type='elastic-load-balancer',
+                      Value='elb-111111.us-west-1.elb.amazonaws.com')
+    rule = FailoverRule('TestFailoverRule',
+                        Primary=Primary(
+                            EndpointReference='MainEndpoint'),
+                        Secondary=Secondary(
+                            EndpointReference='BackupEndpoint')
+                        )
+    p.add_endpoint(main)
+    p.add_endpoint(backup)
+    p.add_rule(rule)
+    print(p.to_json())
+
 
 Licensing
 =========
@@ -40,4 +57,4 @@ See `LICENSE`_ for the full license text.
 .. _`AWS Route53 Traffic Policy Document`: https://docs.aws.amazon.com/Route53/latest/APIReference/api-policies-traffic-policy-document-format.html
 .. _`troposphere`: https://github.com/cloudtools/troposphere
 .. _`BSD 2-Clause license`: https://opensource.org/licenses/BSD-2-Clause
-.. _`LICENSE`: https://github.com/cloudtools/tpd/blob/master/LICENSE
+.. _`LICENSE`: https://github.com/cloudtools/atc53/blob/master/LICENSE
