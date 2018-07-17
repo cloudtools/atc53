@@ -13,7 +13,7 @@ setup(
     long_description=readme(),
     author='Tony Tiger',
     author_email='thatrascaltiger@gmail.com',
-    url='https://github.com/tigertoes/tpd',
+    url='https://github.com/cloudtools/atc53',
     license='New BSD license',
     packages=find_packages(),
     test_suite='tests',
