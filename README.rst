@@ -2,6 +2,9 @@
 atc53
 =====
 
+.. image:: https://travis-ci.org/cloudtools/atc53.png?branch=master
+    :target: https://travis-ci.org/cloudtools/atc53
+
 About
 =====
 
