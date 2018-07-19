@@ -25,11 +25,12 @@ Github:
 Examples
 ========
 
-A simple example:
+A simple example, showing a fail over rule between two load balancers:
 
 .. code:: python
 
     from atc53 import PolicyDocument
+    from atc53.endpoint import Endpoint
     from atc53.rule.failover import FailoverRule, Primary, Secondary
 
     p = PolicyDocument()
