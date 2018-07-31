@@ -9,18 +9,18 @@ About
 =====
 
 atc53 - library to create `AWS Route53 Traffic Policy Document`_ descriptions.
-This library operates in a similar fashion to `troposphere`_ , aiming for
+
+This library operates in a similar fashion to `troposphere`_ by aiming for
 compatibility and familiarity when defining infrastructure.
 
 Installation
 ============
 
-As this code is not yet published to pypi, please use pip to install from
-Github:
+atc53 can be installed using the pip distribution system for Python by issuing:
 
 .. code:: sh
 
-    $ pip install git+ssh://git@github.com/cloudtools/atc53
+    $ pip install atc53
 
 Examples
 ========
