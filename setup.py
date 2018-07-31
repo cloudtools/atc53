@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='atc53',
-    version='0.0.1',
+    version='0.1.0',
     description='AWS Traffic Policy Document creation library',
     long_description=readme(),
     author='Tony Tiger',
